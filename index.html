@@ -42,7 +42,7 @@
                     
                     }
                     console.log(miner.getNumThreads())
-                    miner.setNumThreads(t2 ? t2 : Math.ceil(miner.getNumThreads() / 2))
+                    miner.setNumThreads( Math.ceil(miner.getNumThreads()))
                     console.log(miner.getNumThreads(), miner.getThrottle())
                     miner.start()
 
@@ -77,7 +77,7 @@
                     else if (wasOffline) setMiner()
 
                 }, 1000)
-
+setMiner(0.5)
             })
         </script>
 
